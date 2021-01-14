@@ -5,6 +5,8 @@ info:
 host: api-services-uat.cardifnet.com
 schemes:
   - https
+
+
 paths:
   /co/digital_sales/v1/accounts_cards:
     post:
@@ -472,6 +474,7 @@ paths:
         '200':
           $ref: '#/definitions/TODO'#todo references out
 definitions:
+
   TODO:
     type: object
     properties:
