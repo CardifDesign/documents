@@ -1,0 +1,1884 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: CO_DIGITAL_SALES
+host: api-services-uat.cardifnet.com
+schemes:
+  - https
+paths:
+
+  /co/digital_sales/v1/accounts_cards:
+    post:
+      description: Invalid input
+      operationId: accounts_cards
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          required: true
+          schema:
+            $ref: '#/definitions/TODO'#todo references in
+      responses:
+        '200':
+          description: Invalid input
+          schema:
+            $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/credits:
+    post:
+      operationId: credits
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/TODO'#todo references in OJO
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out OJO
+  /co/digital_sales/v1/event_request:
+    post:
+      operationId: event_request
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/TODO'#todo references in
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/file_upload:
+    post:
+      operationId: upload
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/file_upload'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/find_by_name_father:
+    get:
+      operationId: find_by_name_father
+      consumes:
+        - application/json
+      parameters:
+        - name: nameFather
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/generate_policy:
+    post:
+      operationId: generate-policy
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/TODO'#todo references in
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/get_accumulated:
+    post:
+      operationId: get_accumulated
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/Adviser'
+          required: true
+  /co/digital_sales/v1/get_broadcast_incentive_line:
+    post:
+      operationId: get_broadcast_incentive_line
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/Adviser'
+          required: true
+  /co/digital_sales/v1/get_incentive:
+    post:
+      operationId: get_incentive
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/Adviser'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/get_issue:
+    post:
+      operationId: get_issue
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/Adviser'
+          required: true
+  /co/digital_sales/v1/get_line_business:
+    post:
+      operationId: get_line_business
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/Adviser'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/get_ranking_month:
+    post:
+      operationId: get_ranking_month
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/Adviser'
+          required: true
+  /co/digital_sales/v1/get_ranking_year:
+    post:
+      operationId: get_ranking_year
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/Adviser'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/get_validation_adviser:
+    post:
+      operationId: get_validation_adviser
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/get_validation_adviser'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/health_approval:
+    put:
+      operationId: health_approval
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/TODO'#todo references in
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/log_file_upload:
+    get:
+      operationId: log_file_upload
+      consumes:
+        - application/json
+      parameters:
+        - name: report
+          in: query
+          required: false
+          description: Request body
+          type: string
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/otp_generation:
+    post:
+      operationId: otp_generation
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/otpInputGeneration'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  '/co/digital_sales/v1/otp_generation_sales/{partnerId}':
+    get:
+      operationId: otp_generation_sales
+      parameters:
+        - name: partnerId
+          in: path
+          required: true
+          type: string
+        - name: documentType
+          in: query
+          required: false
+          type: string
+        - name: documentNumber
+          in: query
+          required: false
+          type: string
+        - name: channel
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/otp_send:
+    post:
+      operationId: otp_send
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/TODO'#todo references in
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/otp_validation:
+    post:
+      operationId: otp_validation
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/otpInputValidation'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/paymen_method_insert:
+    post:
+      operationId: paymen_method_insert
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/TODO'#todo references in
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/payment:
+    post:
+      operationId: payment
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/TODO'#todo references in
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/payu_payment:
+    post:
+      operationId: payu_payment
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/paymentGateway'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/payu_refund:
+    post:
+      operationId: payu_refund
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/paymentGatewayRefund'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/payu_token:
+    post:
+      operationId: payu_token
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/paymentGatewayToken'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/payu_tokenization:
+    post:
+      operationId: tokenization
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/paymentGateway'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/payu_tokenization_payment:
+    post:
+      operationId: payu_tokenization_payment
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/paymentGateway'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/request:
+    post:
+      operationId: request
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/EmissionRequest'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/request_life:
+    post:
+      operationId: request_life
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/TODO'#todo references in
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+  /co/digital_sales/v1/request_popular:
+    post:
+      operationId: request_popular
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/EventRequestPopular'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out OJO
+  /co/digital_sales/v1/request_sbk:
+    post:
+      operationId: request_sbk
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Request body
+          schema:
+            $ref: '#/definitions/EventRequestSBK'
+          required: true
+      responses:
+        '200':
+          $ref: '#/definitions/TODO'#todo references out
+definitions:
+  TODO:
+    type: object
+    properties:
+      FALTA:
+        type: integer
+        format: int32
+        description: FALTA POR DEFINIR
+
+      bodyResponse:
+        type: object
+        description: FALTA POR DEFINIR
+#tentativos todo
+  Adviser:
+    type: object
+    title: Adviser
+    description: The root schema comprises the entire JSON document.
+    default: {}
+    required:
+      - fecPeriodo
+      - docAsesor
+      - codSocio
+    properties:
+      fecPeriodo:
+        type: integer
+        title: The fecPeriodo schema
+        description: An explanation about the purpose of this instance.
+        default: 0
+      docAsesor:
+        type: integer
+        title: The docAsesor schema
+        description: An explanation about the purpose of this instance.
+        default: 0
+      codSocio:
+        type: integer
+        title: The codSocio schema
+        description: An explanation about the purpose of this instance.
+        default: 0
+  get_validation_adviser:
+    type: object
+    title: get_validation_adviser
+    description: The root schema comprises the entire JSON document.
+    default: {}
+    required:
+      - num_documento
+      - codSocio
+    properties:
+      num_documento:
+        type: integer
+        title: The num_documento schema
+        description: An explanation about the purpose of this instance.
+        default: 0
+      codSocio:
+        type: integer
+        title: The codSocio schema
+        description: An explanation about the purpose of this instance.
+        default: 0
+  file_upload:
+    type: array
+    title: file_upload
+    description: The root schema comprises the entire JSON document.
+    default: []
+    items:
+      type: object
+      title: The first anyOf schema
+      description: An explanation about the purpose of this instance.
+      default: {}
+      required:
+        - type
+        - content
+        - name
+      properties:
+        type:
+          type: string
+          title: The type schema
+          description: An explanation about the purpose of this instance.
+          default: ''
+        content:
+          type: string
+          title: The content schema
+          description: An explanation about the purpose of this instance.
+          default: ''
+        name:
+          type: string
+          title: The name schema
+          description: An explanation about the purpose of this instance.
+          default: ''
+#---------------------------------
+#deficiones otp
+  otpInputGeneration:
+    type: object
+    properties:
+      partnerId:
+        type: integer
+        description: Partner Id
+      cellphone:
+        type: string
+        description: Customer cellphone
+      documnetType:
+        type: string
+        description: Customer documnetType
+      documnetNumber:
+        type: string
+        description: Customer documnetNumber
+      email:
+        type: string
+        description: Customer email
+      channel:
+        type: string
+        description: Channel
+  otpInputValidation:
+    type: object
+    properties:
+      otpNumber:
+        type: integer
+        description: OTP number
+      partnerId:
+        type: string
+        description: Partner Id
+      cellphone:
+        type: string
+        description: Customer cellphone
+      documnetType:
+        type: string
+        description: Customer documnetType
+      documnetNumber:
+        type: string
+        description: Customer documnetNumber
+      email:
+        type: string
+        description: Customer email
+      channel:
+        type: string
+        description: ChanNel
+  otpResponse:
+    type: object
+    properties:
+      returnCode:
+        type: integer
+        description: codigo de retorno
+      mesagge:
+        type: string
+        description: descripcion #todo description
+      bodyResponse:
+        type: object
+        properties:
+          otpNumber:
+            type: integer
+            description: numero otp
+#---------------------------------------------
+#definiciones para payment-gateway
+
+  paymentGatewayResponse:
+      type: object
+      properties:
+        returnCode:
+          type: integer
+          description: Response Return Code
+        mesagge:
+          type: string
+          description: Response Description
+        bodyResponse:
+          type: object
+          properties:
+            person:
+              type: object
+              properties:
+                state:
+                  type: string
+                  description: transaction status
+
+    #---------------------------------------------
+  paymentGateway:
+      type: object
+      properties:
+        language:
+          type: string
+          maxLength: 2
+          description: The language used in the petition. Using for system error messages. See supported languages
+        command:
+          type: string
+          maxLength: 32
+          description: Use SUBMIT_TRANSACTION.
+        merchant:
+          $ref: "#/definitions/merchant"
+        transaction:
+          $ref: "#/definitions/transactionPayment"
+        test:
+          type: boolean
+          description: Use SUBMIT_TRANSACTION.
+        partner:
+          $ref: "#/definitions/partner"
+        event:
+          $ref: "#/definitions/event"
+        person:
+          $ref: "#/definitions/person"
+
+    #---------------------------------------------
+  paymentGatewayToken:
+      type: object
+      properties:
+        language:
+          type: string
+          maxLength: 2
+          description: The language used in the petition. Using for system error messages. See supported languages
+        command:
+          type: string
+          maxLength: 32
+          description: Use SUBMIT_TRANSACTION.
+        merchant:
+          $ref: "#/definitions/merchant"
+        transaction:
+          $ref: "#/definitions/transactionToken"
+        test:
+          type: boolean
+          description: Use SUBMIT_TRANSACTION.
+
+    #---------------------------------------------
+  paymentGatewayRefund:
+      properties:
+        language:
+          type: string
+          maxLength: 2
+          description: The language used in the petition. Using for system error messages. See supported languages
+        command:
+          type: string
+          maxLength: 32
+          description: Use SUBMIT_TRANSACTION.
+        merchant:
+          $ref: "#/definitions/merchant"
+        transaction:
+          $ref: "#/definitions/transactionRefund"
+        test:
+          type: boolean
+          description: Use SUBMIT_TRANSACTION.
+
+    #---------------------------------------------
+  merchant:
+      type: object
+      required:
+        - apiKey
+        - apiLogin
+        - type
+        - paymentMethod
+        - paymentCountry
+        - deviceSessionId
+        - ipAddress
+        - cookie
+        - userAgent
+      properties:
+        apiKey:
+          type: string
+          minLength: 6
+          maxLength: 32
+          description: The user or login provided by PayU.
+        apiLogin:
+          type: string
+          minLength: 12
+          maxLength: 32
+          description: The key or password provided by PayU.
+  transactionPayment:
+    type: object
+    properties:
+      order:
+        $ref: "#/definitions/order"
+      shippingAddress:
+        $ref: "#/definitions/shippingAddress"
+      payer:
+        $ref: "#/definitions/payer"
+      creditCard:
+        $ref: "#/definitions/creditCard"
+      extraParameters:
+        $ref: "#/definitions/extraParameters2"
+      type:
+        type: string
+        maxLength: 32
+        description: For authorization and capture= AUTHORIZATION_AND_CAPTURE For authorization= AUTHORIZATION
+      paymentMethod:
+        type: string
+        maxLength: 32
+        description: The means of payment.
+      paymentCountry:
+        type: string
+        maxLength: 2
+        description: Country of payment.
+      deviceSessionId:
+        type: string
+        maxLength: 255
+        description: The identifier of the session of the device from where the transaction is made. You can find more information on the page
+      ipAddress:
+        type: string
+        maxLength: 39
+        description: The IP address of the device from where the transaction is made.
+      cookie:
+        type: string
+        maxLength: 255
+        description: The cookie stored on the device from where the transaction is made.
+      userAgent:
+        type: string
+        maxLength: 1024
+        description: The user agent of the browser from where the transaction is made.
+
+    #---------------------------------------------
+  transactionToken:
+    type: object
+    properties:
+      order:
+        $ref: "#/definitions/order"
+      payer:
+        $ref: "#/definitions/payer"
+      creditCardTokenId:
+        type: string
+        description: credit card token
+      creditCard:
+        $ref: "#/definitions/creditCardToken"
+      extraParameters:
+        $ref: "#/definitions/extraParameters"
+  transactionRefund:
+    type: object
+    properties:
+      order:
+        type: object
+        properties:
+          Id:
+            type: number
+            description: Id number provided by PayU
+      type:
+        type: string
+        maxLength: 32
+        description: REFUND
+      reason:
+        type: string
+        description: Reason for requesting the refund or cancellation of the transaction
+      parentTransactionId:
+        type: string
+        description: Parent transaction Id.
+  order:
+    type: object
+    required:
+      - accountId
+      - referenceCode
+      - description
+      - language
+      - signature
+    properties:
+      accountId:
+        type: number
+        description: The key or password provided by PayU.
+      referenceCode:
+        type: string
+        minLength: 1
+        maxLength: 255
+        description: The order reference code. Represents the identifier of the transaction in the merchant's system.
+      description:
+        type: string
+        minLength: 1
+        maxLength: 255
+        description: The description of the order
+      language:
+        type: string
+        maxLength: 2
+        description: The language used in the emails sent by the buyer and seller.
+      signature:
+        type: string
+        maxLength: 255
+        description: TheThe signature associated with the order. To learn more visit
+      notifyUrl:
+        type: string
+        maxLength: 2048
+        description: The notification or confirmation URL of the order.
+      additionalValues:
+        type: object
+        properties:
+          TX_VALUE:
+            type: object
+            required:
+              - value
+              - currency
+            properties:
+              value:
+                type: number
+                maxLength: 64
+                description: TX_VALUE, is the total amount of the transaction. It can contain two decimal digit. Eg 10000.00 or 10000. This value must be sent in transaction.order.additionalValues.entry.additionalValue.value
+              currency:
+                type: string
+                maxLength: 3
+                description: The ISO code of the currency associated with the amount.
+          TX_TAX:
+            type: object
+            required:
+              - value
+              - currency
+            properties:
+              value:
+                type: number
+                maxLength: 64
+                description: TX_TAX, is the VAT value (Value Added Tax only valid for Colombia) of the transaction, if the null VAT is sent, the system will automatically apply 19. It can contain two decimal digits. Ex= 19000.00.
+              currency:
+                type: string
+                maxLength: 3
+                description: The ISO code of the currency associated with the amount.
+          TX_TAX_RETURN_BASE:
+            type: object
+            required:
+              - value
+              - currency
+            properties:
+              value:
+                type: number
+                maxLength: 64
+                description: TX_TAX_RETURN_BASE, It is the base value on which the VAT is calculated only valid for Colombia. In case it does not have VAT, it must be sent in 0
+              currency:
+                type: string
+                maxLength: 3
+                description: The ISO code of the currency associated with the amount.
+      buyer:
+        $ref: "#/definitions/buyer"
+  buyer:
+    type: object
+    required:
+      - fullName
+      - emailAddress
+      - contactPhone
+      - dniNumber
+    properties:
+      merchantBuyerId:
+        type: string
+        maxLength: 100
+        description: Buyer identifier in the merchant's system.
+      fullName:
+        type: string
+        maxLength: 150
+        description: Full names of the buyer.
+      emailAddress:
+        type: string
+        maxLength: 255
+        description: Buyer's email.
+      contactPhone:
+        type: string
+        maxLength: 20
+        description: Buyer's contact telephone number.
+      dniNumber:
+        type: string
+        maxLength: 20
+        description: Buyer identification number.
+      shippingAddress:
+        $ref: "#/definitions/shippingAddress"
+  shippingAddress:
+    type: object
+    properties:
+      street1:
+        type: string
+        maxLength: 100
+        description: First line of the address.
+      street2:
+        type: string
+        maxLength: 100
+        description: Second line of the address.
+      city:
+        type: string
+        maxLength: 50
+        description: Address city.
+      state:
+        type: string
+        maxLength: 50
+        description: State.
+      country:
+        type: string
+        maxLength: 2
+        description: country.
+      postalCode:
+        type: string
+        maxLength: 20
+        description: Buyer's shipping address zip code.
+      phone:
+        type: string
+        maxLength: 20
+        description: Buyer's shipping address zip code.
+  payer:
+    type: object
+    required:
+      - fullName
+      - emailAddress
+      - contactPhone
+      - dniNumber
+    properties:
+      merchantBuyerId:
+        type: string
+        maxLength: 100
+        description: Buyer identifier in the merchant's system.
+      fullName:
+        type: string
+        maxLength: 150
+        description: Full names of the buyer.
+      emailAddress:
+        type: string
+        maxLength: 255
+        description: Buyer's email.
+      contactPhone:
+        type: string
+        maxLength: 20
+        description: Payer's contact telephone number.
+      dniNumber:
+        type: string
+        maxLength: 20
+        description: payer's document.
+      shippingAddress:
+        $ref: "#/definitions/shippingAddress"
+  creditCard:
+    type: object
+    required:
+      - number
+      - securityCode
+      - contactPhone
+      - expirationDate
+      - name
+    properties:
+      number:
+        type: string
+        minLength: 13
+        maxLength: 20
+        description: The credit card number.
+      securityCode:
+        type: string
+        minLength: 1
+        maxLength: 4
+        description: The credit card security code (CVC2, CVV2, CID).
+      expirationDate:
+        type: string
+        format: YYYY/MM
+        maxLength: 7
+        description: The expiration date of the credit card, see in the examples the availability by means of payment. YYYY / MM format.
+      name:
+        type: string
+        minLength: 13
+        maxLength: 20
+        description: The credit card number.
+  creditCardToken:
+    type: object
+    required:
+      - processWithoutCvv2
+      - securityCode
+    properties:
+      processWithoutCvv2:
+        type: string
+      securityCode:
+        type: integer
+        minLength: 1
+        maxLength: 3
+  extraParameters:
+    type: object
+    properties:
+      type:
+        type: string
+        maxLength: 32
+        description: For authorization and capture= AUTHORIZATION_AND_CAPTURE For authorization= AUTHORIZATION
+      paymentMethod:
+        type: string
+        maxLength: 32
+        description: The means of payment.
+      paymentCountry:
+        type: string
+        maxLength: 2
+        description: Country of payment.
+      deviceSessionId:
+        type: string
+        maxLength: 255
+        description: The identifier of the session of the device from where the transaction is made. You can find more information on the page
+      ipAddress:
+        type: string
+        maxLength: 39
+        description: The IP address of the device from where the transaction is made.
+      cookie:
+        type: string
+        maxLength: 255
+        description: The cookie stored on the device from where the transaction is made.
+      userAgent:
+        type: string
+        maxLength: 1024
+        description: The user agent of the browser from where the transaction is made.
+  extraParameters2:
+    type: object
+    required:
+      - number
+      - securityCode
+      - contactPhone
+      - expirationDate
+      - name
+    properties:
+      INSTALLMENTS_NUMBER:
+        type: string
+        maxLength: 64
+        description: The name of the parameter. Example= "INSTALLMENTS_NUMBER", "RESPONSE_URL", "PSE_REFERENCE1, etc. See use of this variable in the examples by country.
+  person:
+    type: object
+    required:
+      - documentType
+    properties:
+      documentType:
+        type: string
+        description: Customer document Type
+  partner:
+    type: object
+    required:
+      - partner
+      - securityCode
+    properties:
+      partnerId:
+        type: string
+        description: Partner Id
+  event:
+    type: object
+    required:
+      - eventType
+      - channel
+      - statusEvent
+    properties:
+      eventType:
+        type: string
+        maxLength: 2
+        enum:
+          - "01"
+        description: Event type, 01=Emission
+      channel:
+        type: number
+        maxLength: 2
+        enum:
+          - 3
+        description: Channel used to add or update the record. 03=Ventas Digitales.
+      eventStatus:
+        type: string
+        maxLength: 2
+        enum:
+          - BG
+        description: BG=Begin, CL=Closed, CN=Cancel, SC=Successfully completed or finished,
+          PN=Pending, PR=In Process, FL=Failed .
+      userId:
+        type: string
+        maxLength: 30
+        description: User who registered the event.
+  paymentGatewayResponseToken:
+    type: object
+    properties:
+      returnCode:
+        type: integer
+        description: Response Return Code
+      mesagge:
+        type: string
+        description: Response Description
+      bodyRespponse:
+        $ref: "#/definitions/payuResponse"
+  payuResponse:
+    type: object
+    properties:
+      code:
+        type: string
+        description: Codigo respuesta Pauy
+      error:
+        type: string
+        description: error respuesta Payu
+      transactionResponse:
+        type: object
+        properties:
+          orderId:
+            type: integer
+            description: Numero de orden Payu
+          transactionId:
+            type: string
+            description: Id de transaccion Payu
+          state:
+            type: string
+            description: Estado Payu
+          paymentNetworkResponseCode:
+            type: string
+            description: Codigo de respuesta Payu
+          paymentNetworkResponseErrorMessage:
+            type: string
+            description: Mensaje codigo de respuesta nPayu
+          trazabilityCode:
+            type: string
+            description: trazabilidad Payu
+          authorizationCode:
+            type: string
+            description: codigo de autorizacion Payu
+          pendingReason:
+            type: string
+            description: Razon pendiente Payu
+          responseCode:
+            type: string
+            description: codigo respuesta Payu
+          errorCode:
+            type: string
+            description: codigo de error
+          responseMessage:
+            type: string
+            description: Mensaje de respuesta Payu
+          transactionDate:
+            type: string
+            description: fecha Payu
+          transactionTime:
+            type: string
+            description: Hora Payu
+          operationDate:
+            type: string
+            description: Fecha operacion Payu
+          extraParameters:
+            type: string
+            description: Parametros extra Payu
+#--------------------------------------------
+#definitions Emission
+
+  EventRequestPopular:
+    type: object
+    properties:
+      partner:
+        type: object
+        required:
+            - partnerId
+        properties:
+          partnerId:
+            type: number
+            maxLength: 2
+            description: Partner id
+      clobInfoEmission:
+        $ref: "#/definitions/PopularClob"
+      emission:
+        $ref: "#/definitions/PopularEmission"
+      person:
+        $ref: "#/definitions/PopularPerson"
+  PopularClob:
+    type: object
+    properties:
+      generateClobFlag:
+        type: string
+        maxLength: 1
+        description: Campo que debe ir en null
+  PopularEmission:
+    type: object
+    properties:
+      advisoryDocumentNumber:
+        type: string
+        maxLength: 8
+      advisoryDocumentType:
+        type: string
+      channel:
+        type: string
+        maxLength: 2
+      emissionInfo:
+        type: string
+      emissionStatus:
+        type: string
+      eventStatus:
+        type: string
+      eventType:
+        type: string
+      eventUser:
+        type: string
+      insuredValue:
+        type: string
+      newPolicy:
+        type: string
+      plan:
+        type: string
+      product:
+        type: string
+      segment:
+        type: string
+      subProduct:
+        type: string
+  PopularPerson:
+    type: object
+    required:
+        - documentType
+        - documentNumber
+        - firstName
+        - secondName
+        - cellPhone
+        - codeZone
+        - email
+        - gender
+        - age
+    properties:
+      birthDate:
+        type: string
+      documentNumber:
+        type: string
+        maxLength: 20
+        description: Customer document number
+      documentType:
+        type: string
+        maxLength: 2
+        description: Customer document type, valores,
+                     CC=Cédula de Ciudadanía,
+                     TI=Tarjeta de Identidad,
+                     CE=Cédula de Extranjería,
+                     PS=Pasaporte,
+                     CD=Carnet diplomatico
+                     DNI=Documento Nacional de Identidad,
+                     RUC=Registro Unico Contribuyente,
+                     RC=Registro Civil.
+      expeditionDocumentDate:
+        type: string
+      firstName:
+        type: string
+        maxLength: 60
+        description: customer names
+      gender:
+        type: string
+        maxLength: 1
+        description:  Person's gender
+                    - M = Másculino
+                    - F = Femenino
+                    - H = Hermafrodita
+                    - T = Transgénero
+                    - N = No reportado
+      lastName:
+        type: string
+        maxLength: 80
+        description: customer last name
+      middleName:
+        type: string
+        maxLength: 80
+        description: Middle Name
+      secondLastName:
+        type: string
+        format: email
+        maxLength: 80
+  PopularResultResponse:
+    type: object
+    properties:
+      returnCode:
+        type: integer
+        description: Response Return Code
+      message:
+        type: string
+        description: Response Description
+  PopularResultResponseTC:
+    type: object
+    properties:
+        returnCode:
+          type: integer
+        message:
+          type: string
+        bodyRespponse:
+          type : object
+          properties:
+            partner:
+              type: object
+              required:
+                  - partnerId
+              properties:
+                partnerId:
+                  type: number
+                  maxLength: 2
+                  description: Partner id
+            person:
+              $ref: "#/definitions/PopularPersonTC"
+            emission:
+              $ref: "#/definitions/PopularEmissionTC"
+  PopularPersonTC:
+    type: object
+    required:
+        - documentType
+        - documentNumber
+        - firstName
+        - secondName
+        - cellPhone
+        - codeZone
+        - email
+        - gender
+        - age
+    properties:
+      documentType:
+        type: string
+        maxLength: 2
+        description: Customer document type, valores,
+                     CC=Cédula de Ciudadanía,
+                     TI=Tarjeta de Identidad,
+                     CE=Cédula de Extranjería,
+                     PS=Pasaporte,
+                     CD=Carnet diplomatico
+                     DNI=Documento Nacional de Identidad,
+                     RUC=Registro Unico Contribuyente,
+                     RC=Registro Civil.
+      documentNumber:
+        type: string
+        maxLength: 20
+        description: Customer document number
+      firstName:
+        type: string
+        maxLength: 60
+        description: customer names
+      middleName:
+        type: string
+        maxLength: 80
+        description: Middle Name
+      lastName:
+        type: string
+        maxLength: 80
+        description: customer last name
+      secondLastName:
+        type: string
+        format: email
+        maxLength: 80
+      birthDate:
+        type: string
+      gender:
+        type: string
+        maxLength: 1
+        description:  Person's gender
+                    - M = Másculino
+                    - F = Femenino
+                    - H = Hermafrodita
+                    - T = Transgénero
+                    - N = No reportado
+      expeditionDocumentDate:
+        type: string
+  PopularEmissionTC:
+    type: object
+    properties:
+      productId:
+        type: string
+      subProduct:
+        type: string
+      plan:
+        type: string
+      newPolicy:
+        type: string
+      segment:
+        type: string
+      insuredValue:
+        type: string
+      emissionInfo:
+        type: string
+      eventUser:
+        type: string
+      advisoryDocumentNumber:
+        type: string
+        maxLength: 8
+      advisoryDocumentType:
+        type: string
+      channel:
+        type: string
+        maxLength: 2
+      requestEmissionDate:
+        type: string
+      emissionStatus:
+        type: string
+      event:
+        type: object
+        properties:
+          eventId:
+            type: integer
+          eventStatus:
+            type: string
+          eventType:
+            type: string
+  requestEncrypt:
+    type: object
+    required:
+      - information
+      - keyName
+    properties:
+      information:
+        type: string
+        description: information
+      keyName:
+        type: string
+        description: keyname
+  EmissionRequestUpdateAttribute:
+    type: object
+    required:
+      - emissionInfoDataTypeTag
+      - emissionInfoTag
+      - emissionInfoValueTag
+      - eventId
+    properties:
+      emissionInfo:
+        type: string
+        description: all emissionInfo object before change
+      emissionInfoDataTypeTag:
+        type: string
+        description: Data type from emissionInfo tag
+      emissionInfoTag:
+        type: string
+        description: Tag from emissionInfo
+      emissionInfoValueTag:
+        type: string
+        description: Value tag from emissionInfo
+      eventId:
+        type: string
+        description: Event id
+    title: EmissionRequestUpdateAttribute
+  responseUpdateAttribute:
+    type: object
+    properties:
+        returnCode:
+          type: integer
+        message:
+          type: string
+        bodyRespponse:
+          type : object
+          properties:
+            eventId:
+              type: string
+              description: Event id
+            emissionInfoTag:
+              type: string
+              description: Tag from emissionInfo
+            emissionInfoValueTag:
+              type: string
+              description: Value tag from emissionInfo
+            emissionInfoDataTypeTag:
+              type: string
+              description: Data type from emissionInfo tag
+            emissionInfo:
+              type: string
+              description: emission Information json
+  responseEncrypt:
+    type: object
+    properties:
+      returnCode:
+        type: integer
+        format: int32
+        description: Return Code
+      message:
+        type: string
+        description: Description
+      bodyResponse:
+        type: object
+        description: Object Response Method
+  RequestPopularTC:
+    type: object
+    required:
+      - emissionInfoDataTypeTag
+      - emissionInfoTag
+      - emissionInfoValueTag
+      - eventId
+      - partnerId
+      - channelId
+      - keyName
+    properties:
+      emissionInfo:
+        type: string
+        description: all emissionInfo object before change
+      emissionInfoDataTypeTag:
+        type: string
+        description: Data type from emissionInfo tag
+      emissionInfoTag:
+        type: string
+        description: Tag from emissionInfo
+      emissionInfoValueTag:
+        type: string
+        description: Value tag from emissionInfo
+      eventId:
+        type: string
+        description: Event id
+      partnerId:
+        type: string
+        description: Partner id
+      channelId:
+        type: string
+        description: Channel id
+      keyName:
+        type: string
+        description: Key name
+  responseRequestPopularTC:
+    type: object
+    properties:
+      returnCode:
+        type: integer
+      message:
+        type: string
+  EventRequestSBK:
+    type: object
+    properties:
+      partner:
+        type: object
+        required:
+          - partnerId
+        properties:
+          partnerId:
+            type: number
+            maxLength: 2
+            description: Partner id
+      emission:
+        $ref: "#/definitions/sbkEmission"
+      person:
+        $ref: "#/definitions/sbkPerson"
+  sbkEmission:
+    type: object
+    required:
+      - productId
+      - paymentFrequency
+      - channel
+      - plan
+    properties:
+      productId:
+        type: string
+        maxLength: 8
+        description: Product id
+      paymentFrequency:
+        type: string
+        maxLength: 1
+        description: Payment frequency.
+          M=mensual,
+          A=Anual,
+          T=Trimestral,
+          S=Semestral
+      channel:
+        type: string
+        maxLength: 2
+        enum:
+          - "03"
+        description: input channel
+      plan:
+        type: string
+        maxLength: 2
+        description: Plan number
+  sbkPerson:
+    type: object
+    required:
+      - documentType
+      - documentNumber
+      - firstName
+      - secondName
+      - cellPhone
+      - codeZone
+      - email
+      - gender
+      - age
+    properties:
+      documentType:
+        type: string
+        maxLength: 2
+        description: Customer document type, valores,
+          CC=Cédula de Ciudadanía,
+          TI=Tarjeta de Identidad,
+          CE=Cédula de Extranjería,
+          PS=Pasaporte,
+          CD=Carnet diplomatico
+          DNI=Documento Nacional de Identidad,
+          RUC=Registro Unico Contribuyente,
+          RC=Registro Civil.
+      documentNumber:
+        type: string
+        maxLength: 20
+        description: Customer document number
+      firstName:
+        type: string
+        maxLength: 60
+        description: customer names
+      secondName:
+        type: string
+        maxLength: 80
+        description: customer last name
+      codeZone:
+        type: string
+        maxLength: 6
+        description: city callsign
+      cellPhone:
+        type: string
+        maxLength: 10
+        description: customer cellPhone
+      email:
+        type: string
+        format: email
+        maxLength: 250
+        description: customer email
+      gender:
+        type: string
+        maxLength: 1
+        description: Person's gender
+          - M = Másculino
+          - F = Femenino
+          - H = Hermafrodita
+          - T = Transgénero
+          - N = No reportado
+      age:
+        type: string
+        maxLength: 2
+        description: Customer age
+  sbkResultResponse:
+    type: object
+    properties:
+      returnCode:
+        type: integer
+        description: Response Return Code
+      mesagge:
+        type: string
+        description: Response Description
+      bodyResponse:
+        type: object
+        properties:
+          policyNumber:
+            type: number
+  EmissionRequest:
+    type: object
+    required:
+      - person
+      - emission
+    properties:
+      person:
+        type: object
+        required:
+          - documentType
+          - documentNumber
+        properties:
+          documentType:
+            type: string
+            description: Type of identification
+          documentNumber:
+            type: string
+            description: Person identification number
+          firstName:
+            type: string
+            description: Person first name
+          middleName:
+            type: string
+            description: Person middle name
+          lastName:
+            type: string
+            description: Person last name
+          secondLastName:
+            type: string
+            description: Person second last name
+          birthDate:
+            type: string
+            description: Person date of birth
+            format: date
+          gender:
+            type: string
+            description: Person gender
+            enum:
+              - M
+              - F
+          expeditionDocumentDate:
+            type: string
+            description: Date of identification document expedition
+      emission:
+        type: object
+        required:
+          - productId
+          - plan
+        properties:
+          productId:
+            type: string
+            description: Product plan of emission
+          subProduct:
+            type: string
+            description: Sub product of emission
+          plan:
+            type: string
+            description: Product plan of emission
+          segment:
+            type: string
+            description: Product segment of emission
+          insuredValue:
+            type: number
+            description: Insured value of proposed policy
+          emissionInfo:
+            type: string
+            description: Emission details
+      health:
+        type: object
+        required:
+          - evaluation
+          - declaration
+        properties:
+          evaluation:
+            type: string
+            description: Describes if evaluation is required
+          declaration:
+            type: string
+            description: Describes if declaration is required
+          appointment:
+            $ref: "#/definitions/Appointment"
+      productsAmmount:
+        type: array
+        items:
+          type: object
+          properties:
+            productGroup:
+              type: string
+              description: Group of product
+            ammount:
+              type: number
+              description: Total ammount of product coverage
+  EmissionOperationResult:
+    type: object
+    required:
+      - status
+      - requestId
+      - details
+    properties:
+      status:
+        type: boolean
+        description: "Status of the response, true in case of success, false in case of failure."
+      requestId:
+        type: string
+        description: Unique Identifier of request
+      details:
+        type: string
+        description: Details about the response
+  AppointmentOperationResult:
+    type: object
+    required:
+      - status
+      - requestId
+      - details
+    properties:
+      status:
+        type: boolean
+        description: "Status of the response, true in case of success, false in case of failure."
+      appointmentId:
+        type: string
+        description: Unique Identifier of request
+      details:
+        type: string
+        description: Details about the response
+  Emission:
+    type: object
+    properties:
+      emissionStatus:
+        type: string
+        description: "Emission Status  (Pending - P, Successful - S, Failed - F)"
+      emissionDate:
+        type: string
+        description: Date of policy emission
+      policyNumber:
+        type: string
+        description: Number of created policy
+      emissionInfo:
+        type: string
+        description: Data of created policy
+  ComposeEmissionData:
+    type: object
+    properties:
+      request:
+        $ref: "#/definitions/EmissionRequest"
+      emission:
+        $ref: "#/definitions/Emission"
+  HealthOperationResult:
+    type: object
+    required:
+      - status
+      - requestId
+      - details
+    properties:
+      status:
+        type: boolean
+        description: "Status of the response, true in case of success, false in case of failure."
+      healtId:
+        type: string
+        description: Unique Identifier of request
+      details:
+        type: string
+        description: Details about the response
+  Appointment:
+    type: object
+    properties:
+      scheduledDate:
+        type: string
+        format: date
+      confirm:
+        type: string
+        enum:
+          - S
+          - "N"
+  HealthApproval:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Health approval status
+      authorizationCode:
+        type: string
+        description: Health approval code
+  error:
+    type: object
+    required:
+      - message
+      - code
+    properties:
+      message:
+        type: string
+      code:
+        type: integer
+        minimum: 100
+        maximum: 600
+securityDefinitions:
+  petstore_auth:
+    type: "oauth2"
+    authorizationUrl: "http://petstore.swagger.io/oauth/dialog"
+    flow: "implicit"
+    scopes:
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+
+
+#------------------------------------------------------
+
+
+
+
+
+
+

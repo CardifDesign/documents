@@ -1,0 +1,566 @@
+openapi: 3.0.1
+info:
+  title: API CO_DIGITAL_SALES
+  description: <hr/> API Rest DIGITAL SALES<br/> For API Gateway
+    <br/>   <hr/> By Architecture Team. <br/> July 2020. <br/> Cardif Colombia.<br/>
+    <hr/><br/> <br/> 02-07-2020 - Creación
+  version: 1.0.0
+servers:
+- url: https://api-services.cardifnet.com/co/digital_sales
+paths:
+  /v1/credit_cards:
+    post:
+      tags:
+      - Credits Only
+      summary: Generates issuance for credits Only
+      description: |
+        <h1> Related projects
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/emissions_cards'
+        required: false
+      responses:
+        default:
+          description: ('200','Success'); (También sirve para un update) ('201','Created
+            Success'); ('204','No Content');(Este aplica cuando llegas a la BD y no
+            obtienes información) ('400','Technical Error'); ('404','Not Found');(método
+            no encontrado) ('408','ConnectionTimeout'); ('422','Unprocessable Entity');(Error
+            por null DB) ('430','Database Exception');(Cualquier otro error en DB)
+            .
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/statusResponse'
+      x-codegen-request-body-name: emissions
+  /v1/accounts:
+    post:
+      tags:
+      - Credits Only
+      summary: Generates issuance for credits Only
+      description: |
+        <h1> Related projects
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/emissions_accounts'
+        required: false
+      responses:
+        default:
+          description: ('200','Success'); (También sirve para un update) ('201','Created
+            Success'); ('204','No Content');(Este aplica cuando llegas a la BD y no
+            obtienes información) ('400','Technical Error'); ('404','Not Found');(método
+            no encontrado) ('408','ConnectionTimeout'); ('422','Unprocessable Entity');(Error
+            por null DB) ('430','Database Exception');(Cualquier otro error en DB)
+            .
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/statusResponse'
+      x-codegen-request-body-name: emissions
+  /v1/credits:
+    post:
+      tags:
+      - Credits Only
+      summary: Generates issuance for credits Only
+      description: |
+        <h1> Related projects
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/emissions_credits'
+        required: false
+      responses:
+        default:
+          description: ('200','Success'); (También sirve para un update) ('201','Created
+            Success'); ('204','No Content');(Este aplica cuando llegas a la BD y no
+            obtienes información) ('400','Technical Error'); ('404','Not Found');(método
+            no encontrado) ('408','ConnectionTimeout'); ('422','Unprocessable Entity');(Error
+            por null DB) ('430','Database Exception');(Cualquier otro error en DB)
+            .
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/statusResponse'
+      x-codegen-request-body-name: emissions
+components:
+
+  securitySchemes:
+
+    Digital_Sales_Oauth:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: 'https://api-services.cardifnet.com/sales/v1/authorization_sales'
+          scopes:
+            Bearer: Bearer
+  schemas:
+    emissions_cards:
+      type: object
+      properties:
+        partnerId:
+          type: integer
+          description: Partner Id.
+        emission:
+          type: object
+          properties:
+            emissionStatus:
+              type: string
+              description: todo #todo
+            eventStatus:
+              type: string
+              description: todo #todo
+            eventType:
+              type: string
+              description: todo #todo
+            eventUser:
+              type: string
+              description: todo #todo
+        generalInformation:
+          type: object
+          properties:
+            dateSale:
+              type: number
+              description: Fecha de venta
+              format: date
+            secureProductCode:
+              maxLength: 5
+              type: string
+              description: Codigo de producto Seguro
+            insurancePlan:
+              maxLength: 5
+              type: string
+              description: Plan de Seguro
+            primaNeta:
+              type: number
+              description: Prima de seguro antes de IVA
+            primaBruta:
+              maxLength: 12
+              type: string
+              description: Prima de seguro IVA incluido
+        personalInformation: #todo 3 campos
+          type: object
+          properties:
+            documentType:
+              maxLength: 1
+              type: string
+              description: Tipo de identificación, “C” Cedula ciudadanía “E” Cédula
+                extranjería “N” Nit “P” Pasaporte “R” Registro civil “T” Tarjeta identidad
+            documentNumber:
+              type: number
+              description: Número de identificación
+            Surname:
+              maxLength: 15
+              type: string
+              description: Primer apellido solicitante
+            secondSurname:
+              maxLength: 15
+              type: string
+              description: Segundo apellido solicitante
+            firstName:
+              maxLength: 15
+              type: string
+              description: Primer nombre solicitante
+            secondName:
+              maxLength: 15
+              type: string
+              description: Segundo nombre solicitante}
+            dateBirth:
+              type: number
+              description: Fecha de nacimiento
+              format: date
+            gender:
+              maxLength: 1
+              type: string
+              description: Sexo (Género) “F” Femenino “M” Masculino
+            email:
+              maxLength: 15
+              type: string
+              description: Dirección de Correo Electrónico
+            cellPhoneNumber:
+              type: number
+              description: Numero de Celular
+            address:
+              maxLength: 60
+              type: string
+              description: Dirección de la casa u oficina, Dirección de correspondencia
+                fisica.
+            city:
+              maxLength: 20
+              type: string
+              description: Ciudad
+            Department:
+              maxLength: 20
+              type: string
+              description: Departamento
+            nationality: #todo
+              maxLength: 30
+              type: string
+              description: nationality
+            birthCountry: #todo
+              maxLength: 30
+              type: string
+              description: Pais de nacimiento
+            documentIniDate: #todo
+              type: number
+              description: Fecha de expedición del documento
+              format: date
+        collectionInformation: #todo 2 campos
+          type: object
+          properties:
+            cardType: #todo
+              type: string
+              description: Tipo de la tajeta(black/gold/clasica/.....)
+            franchise: #todo
+              type: string
+              description: franquicia de la tarjeta de credito visa/master/american express
+            bankProductCode:
+              type: number
+              description: Este define la forma de cobro, Tarjeta de Crédito Crédito
+                Cuenta Ahorros Cuenta Corriente Ej; TC=01, CRE=02 , CAH= 03, CTC=04
+            productDebit:
+              type: number
+              description: Número de la TC/ cuenta de ahorrros/ Crédito
+            creditTerm:
+              type: number
+              description: Solamente para Créditos.
+            creditAmount:
+              type: number
+              description: Valor inicial de crédito
+            cardIniDate:
+              type: number
+              description: Fecha de inicio de la tarjeta/credito/cuenta
+              format: date
+            cardExpirationDate:
+              type: number
+              description: Fecha de vencimiento de la tarjeta/dredito/cuenta
+              format: date
+        incentiveInformation:
+          type: object
+          properties:
+            channel:
+              type: number
+              description: 01 = Oficinas ; 02=Telemarketing ; 03 Fuerza Móvil de ventas;
+                04 digital
+            advisorID:
+              type: number
+              description: Cedula del asesor
+            advisoryOfficeCode:
+              type: number
+              description: Codigo oficina asesor#
+    emissions_credits:
+      type: object
+      properties:
+        partnerId:
+          type: integer
+          description: Partner Id.
+        emission:
+          type: object
+          properties:
+            emissionStatus:
+              type: string
+              description: todo #todo
+            eventStatus:
+              type: string
+              description: todo #todo
+            eventType:
+              type: string
+              description: todo #todo
+            eventUser:
+              type: string
+              description: todo #todo
+        generalInformation:
+          type: object
+          properties:
+            dateSale:
+              type: number
+              description: Fecha de venta
+              format: date
+            secureProductCode:
+              maxLength: 5
+              type: string
+              description: Codigo de producto Seguro
+            insurancePlan:
+              maxLength: 5
+              type: string
+              description: Plan de Seguro
+            primaNeta:
+              type: number
+              description: Prima de seguro antes de IVA
+            primaBruta:
+              maxLength: 12
+              type: string
+              description: Prima de seguro IVA incluido
+        personalInformation: #todo 3 campos
+          type: object
+          properties:
+            documentType:
+              maxLength: 1
+              type: string
+              description: Tipo de identificación, “C” Cedula ciudadanía “E” Cédula
+                extranjería “N” Nit “P” Pasaporte “R” Registro civil “T” Tarjeta identidad
+            documentNumber:
+              type: number
+              description: Número de identificación
+            Surname:
+              maxLength: 15
+              type: string
+              description: Primer apellido solicitante
+            secondSurname:
+              maxLength: 15
+              type: string
+              description: Segundo apellido solicitante
+            firstName:
+              maxLength: 15
+              type: string
+              description: Primer nombre solicitante
+            secondName:
+              maxLength: 15
+              type: string
+              description: Segundo nombre solicitante}
+            dateBirth:
+              type: number
+              description: Fecha de nacimiento
+              format: date
+            gender:
+              maxLength: 1
+              type: string
+              description: Sexo (Género) “F” Femenino “M” Masculino
+            email:
+              maxLength: 15
+              type: string
+              description: Dirección de Correo Electrónico
+            cellPhoneNumber:
+              type: number
+              description: Numero de Celular
+            address:
+              maxLength: 60
+              type: string
+              description: Dirección de la casa u oficina, Dirección de correspondencia
+                fisica.
+            city:
+              maxLength: 20
+              type: string
+              description: Ciudad
+            Department:
+              maxLength: 20
+              type: string
+              description: Departamento
+            nationality: #todo
+              maxLength: 30
+              type: string
+              description: nationality
+            birthCountry: #todo
+              maxLength: 30
+              type: string
+              description: Pais de nacimiento
+            documentIniDate: #todo
+              type: number
+              description: Fecha de expedición del documento
+              format: date
+        collectionInformation:
+          type: object
+          properties:
+            bankProductCode:
+              type: number
+              description: Este define la forma de cobro, Tarjeta de Crédito Crédito
+                Cuenta Ahorros Cuenta Corriente Ej; TC=01, CRE=02 , CAH= 03, CTC=04
+            productDebit:
+              type: number
+              description: Número de la TC/ cuenta de ahorrros/ Crédito
+            creditTerm:
+              type: number
+              description: Solamente para Créditos.
+            creditAmount:
+              type: number
+              description: Valor inicial de crédito
+            cardIniDate:
+              type: number
+              description: Fecha de inicio de la tarjeta/credito/cuenta
+              format: date
+            cardExpirationDate:
+              type: number
+              description: Fecha de vencimiento de la tarjeta/dredito/cuenta
+              format: date
+        incentiveInformation:
+          type: object
+          properties:
+            channel:
+              type: number
+              description: 01 = Oficinas ; 02=Telemarketing ; 03 Fuerza Móvil de ventas;
+                04 digital
+            advisorID:
+              type: number
+              description: Cedula del asesor
+            advisoryOfficeCode:
+              type: number
+              description: Codigo oficina asesor
+    emissions_accounts:
+      type: object
+      properties:
+        partnerId:
+          type: integer
+          description: Partner Id.
+        emission:
+          type: object
+          properties:
+            emissionStatus:
+              type: string
+              description: todo #todo
+            eventStatus:
+              type: string
+              description: todo #todo
+            eventType:
+              type: string
+              description: todo #todo
+            eventUser:
+              type: string
+              description: todo #todo
+        generalInformation:
+          type: object
+          properties:
+            dateSale:
+              type: number
+              description: Fecha de venta
+              format: date
+            secureProductCode:
+              maxLength: 5
+              type: string
+              description: Codigo de producto Seguro
+            insurancePlan:
+              maxLength: 5
+              type: string
+              description: Plan de Seguro
+            primaNeta:
+              type: number
+              description: Prima de seguro antes de IVA
+            primaBruta:
+              maxLength: 12
+              type: string
+              description: Prima de seguro IVA incluido
+        personalInformation: #todo 3 campos
+          type: object
+          properties:
+            documentType:
+              maxLength: 1
+              type: string
+              description: Tipo de identificación, “C” Cedula ciudadanía “E” Cédula
+                extranjería “N” Nit “P” Pasaporte “R” Registro civil “T” Tarjeta identidad
+            documentNumber:
+              type: number
+              description: Número de identificación
+            Surname:
+              maxLength: 15
+              type: string
+              description: Primer apellido solicitante
+            secondSurname:
+              maxLength: 15
+              type: string
+              description: Segundo apellido solicitante
+            firstName:
+              maxLength: 15
+              type: string
+              description: Primer nombre solicitante
+            secondName:
+              maxLength: 15
+              type: string
+              description: Segundo nombre solicitante}
+            dateBirth:
+              type: number
+              description: Fecha de nacimiento
+              format: date
+            gender:
+              maxLength: 1
+              type: string
+              description: Sexo (Género) “F” Femenino “M” Masculino
+            email:
+              maxLength: 15
+              type: string
+              description: Dirección de Correo Electrónico
+            cellPhoneNumber:
+              type: number
+              description: Numero de Celular
+            address:
+              maxLength: 60
+              type: string
+              description: Dirección de la casa u oficina, Dirección de correspondencia
+                fisica.
+            city:
+              maxLength: 20
+              type: string
+              description: Ciudad
+            Department:
+              maxLength: 20
+              type: string
+              description: Departamento
+            nationality: #todo
+              maxLength: 30
+              type: string
+              description: nationality
+            birthCountry: #todo
+              maxLength: 30
+              type: string
+              description: Pais de nacimiento
+            documentIniDate: #todo
+              type: number
+              description: Fecha de expedición del documento
+              format: date
+        collectionInformation:
+          type: object
+          properties:
+            bankProductCode:
+              type: number
+              description: Este define la forma de cobro, Tarjeta de Crédito Crédito
+                Cuenta Ahorros Cuenta Corriente Ej; TC=01, CRE=02 , CAH= 03, CTC=04
+            productDebit:
+              type: number
+              description: Número de la TC/ cuenta de ahorrros/ Crédito
+            creditTerm:
+              type: number
+              description: Solamente para Créditos.
+            creditAmount:
+              type: number
+              description: Valor inicial de crédito
+            cardIniDate:
+              type: number
+              description: Fecha de inicio de la tarjeta/credito/cuenta
+              format: date
+            cardExpirationDate:
+              type: number
+              description: Fecha de vencimiento de la tarjeta/dredito/cuenta
+              format: date
+        incentiveInformation:
+          type: object
+          properties:
+            channel:
+              type: number
+              description: 01 = Oficinas ; 02=Telemarketing ; 03 Fuerza Móvil de ventas;
+                04 digital
+            advisorID:
+              type: number
+              description: Cedula del asesor
+            advisoryOfficeCode:
+              type: number
+              description: Codigo oficina asesor
+    statusResponse:
+      type: object
+      properties:
+        returnCode:
+          type: integer
+          description: codigo de retorno
+        mesagge:
+          type: string
+          description: descripcion
+        bodyResponse:
+          type: object
+          properties:
+            policyNumber:
+              type: number
+              description: Customer policy number generated
+security:
+
+  - Digital_Sales_Oauth:
+      - Bearer

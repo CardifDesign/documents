@@ -1,0 +1,1098 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "CO_DIGITAL_SALES"
+  },
+  "host": "api-services-uat.cardifnet.com",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/co/digital_sales/v1/accounts_cards": {
+      "post": {
+        "description": "Invalid input",
+        "operationId": "accounts_cards",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            }
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/credits": {
+      "post": {
+        "operationId": "credits",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/event_request": {
+      "post": {
+        "operationId": "event_request",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/file_upload": {
+      "post": {
+        "operationId": "upload",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/file_upload"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          },
+          "504": {
+            "description": "Invalid input"
+          },
+          "596": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/find_by_name_father": {
+      "get": {
+        "operationId": "find_by_name_father",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "nameFather",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          },
+          "504": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/generate_policy": {
+      "post": {
+        "operationId": "generate-policy",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          },
+          "596": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/get_accumulated": {
+      "post": {
+        "operationId": "get_accumulated",
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        },
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/Adviser"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/co/digital_sales/v1/get_broadcast_incentive_line": {
+      "post": {
+        "operationId": "get_broadcast_incentive_line",
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        },
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/Adviser"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/co/digital_sales/v1/get_incentive": {
+      "post": {
+        "operationId": "get_incentive",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/Adviser"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Invalid input"
+          },
+          "504": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/get_issue": {
+      "post": {
+        "operationId": "get_issue",
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        },
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/Adviser"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/co/digital_sales/v1/get_line_business": {
+      "post": {
+        "operationId": "get_line_business",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/Adviser"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/get_ranking_month": {
+      "post": {
+        "operationId": "get_ranking_month",
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        },
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/Adviser"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/co/digital_sales/v1/get_ranking_year": {
+      "post": {
+        "operationId": "get_ranking_year",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/Adviser"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/get_validation_adviser": {
+      "post": {
+        "operationId": "get_validation_adviser",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/get_validation_adviser"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "504": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/health_approval": {
+      "put": {
+        "operationId": "health_approval",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/log_file_upload": {
+      "get": {
+        "operationId": "log_file_upload",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "report",
+            "in": "query",
+            "required": false,
+            "description": "Request body",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          },
+          "504": {
+            "description": "Invalid input"
+          },
+          "596": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/otp_generation": {
+      "post": {
+        "operationId": "otp_generation",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/otpInputGeneration"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/otp_generation_sales/{partnerId}": {
+      "get": {
+        "operationId": "otp_generation_sales",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "documentType",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "documentNumber",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "channel",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/otp_send": {
+      "post": {
+        "operationId": "otp_send",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "596": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/otp_validation": {
+      "post": {
+        "operationId": "otp_validation",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/otpInputValidation"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/paymen_method_insert": {
+      "post": {
+        "operationId": "paymen_method_insert",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/payment": {
+      "post": {
+        "operationId": "payment",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/payu_payment": {
+      "post": {
+        "operationId": "payu_payment",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/payu_refund": {
+      "post": {
+        "operationId": "payu_refund",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/payu_token": {
+      "post": {
+        "operationId": "payu_token",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/payu_tokenization": {
+      "post": {
+        "operationId": "tokenization",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          },
+          "596": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/payu_tokenization_payment": {
+      "post": {
+        "operationId": "payu_tokenization_payment",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/request": {
+      "post": {
+        "operationId": "request",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/request_life": {
+      "post": {
+        "operationId": "request_life",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/request_popular": {
+      "post": {
+        "operationId": "request_popular",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/co/digital_sales/v1/request_sbk": {
+      "post": {
+        "operationId": "request_sbk",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request body",
+            "schema": {
+              "$ref": "#/definitions/TODO"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Adviser": {
+      "type": "object",
+      "title": "Adviser",
+      "description": "The root schema comprises the entire JSON document.",
+      "default": {},
+      "required": [
+        "fecPeriodo",
+        "docAsesor",
+        "codSocio"
+      ],
+      "properties": {
+        "fecPeriodo": {
+          "type": "integer",
+          "title": "The fecPeriodo schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0
+        },
+        "docAsesor": {
+          "type": "integer",
+          "title": "The docAsesor schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0
+        },
+        "codSocio": {
+          "type": "integer",
+          "title": "The codSocio schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0
+        }
+      }
+    },
+    "ORDER": {
+      "type": "object",
+      "title": "ORDER",
+      "description": "The root schema comprises the entire JSON document.",
+      "default": {},
+      "required": [
+        "policyNumber",
+        "beneficiaryDocumentType",
+        "beneficiaryDocumentNumber",
+        "beneficiaryDocumentDateExp",
+        "beneficiaryFirstName",
+        "beneficiaryMiddleName",
+        "beneficiaryLastName",
+        "beneficiarySurname",
+        "beneficiaryType",
+        "beneficiaryBirthDate",
+        "beneficiaryBirthPlaceName",
+        "beneficiaryContactMail",
+        "beneficiaryRelationshipId",
+        "beneficiaryPercentageId",
+        "insuredDocumentType",
+        "insuredDocumentNumber",
+        "productId",
+        "partnerId"
+      ],
+      "properties": {
+        "policyNumber": {
+          "type": "string",
+          "title": "The policyNumber schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiaryDocumentType": {
+          "type": "string",
+          "title": "The beneficiaryDocumentType schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiaryDocumentNumber": {
+          "type": "string",
+          "title": "The beneficiaryDocumentNumber schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiaryDocumentDateExp": {
+          "type": "string",
+          "title": "The beneficiaryDocumentDateExp schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiaryFirstName": {
+          "type": "string",
+          "title": "The beneficiaryFirstName schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiaryMiddleName": {
+          "type": "string",
+          "title": "The beneficiaryMiddleName schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "string"
+        },
+        "beneficiaryLastName": {
+          "type": "string",
+          "title": "The beneficiaryLastName schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiarySurname": {
+          "type": "string",
+          "title": "The beneficiarySurname schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiaryType": {
+          "type": "string",
+          "title": "The beneficiaryType schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiaryBirthDate": {
+          "type": "string",
+          "title": "The beneficiaryBirthDate schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiaryBirthPlaceName": {
+          "type": "string",
+          "title": "The beneficiaryBirthPlaceName schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiaryContactMail": {
+          "type": "string",
+          "title": "The beneficiaryContactMail schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "beneficiaryRelationshipId": {
+          "type": "integer",
+          "title": "The beneficiaryRelationshipId schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0
+        },
+        "beneficiaryPercentageId": {
+          "type": "integer",
+          "title": "The beneficiaryPercentageId schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0
+        },
+        "insuredDocumentType": {
+          "type": "string",
+          "title": "The insuredDocumentType schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "insuredDocumentNumber": {
+          "type": "string",
+          "title": "The insuredDocumentNumber schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "productId": {
+          "type": "integer",
+          "title": "The productId schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0
+        },
+        "partnerId": {
+          "type": "integer",
+          "title": "The partnerId schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "get_validation_adviser": {
+      "type": "object",
+      "title": "get_validation_adviser",
+      "description": "The root schema comprises the entire JSON document.",
+      "default": {},
+      "required": [
+        "num_documento",
+        "codSocio"
+      ],
+      "properties": {
+        "num_documento": {
+          "type": "integer",
+          "title": "The num_documento schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0
+        },
+        "codSocio": {
+          "type": "integer",
+          "title": "The codSocio schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0
+        }
+      }
+    },
+    "file_upload": {
+      "type": "array",
+      "title": "file_upload",
+      "description": "The root schema comprises the entire JSON document.",
+      "default": [],
+      "items": {
+        "type": "object",
+        "title": "The first anyOf schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "required": [
+          "type",
+          "content",
+          "name"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "The type schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "content": {
+            "type": "string",
+            "title": "The content schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "name": {
+            "type": "string",
+            "title": "The name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          }
+        }
+      }
+    },
+    "otpInputGeneration": {
+      "type": "object",
+      "properties": {
+        "partnerId": {
+          "type": "integer",
+          "description": "Partner Id"
+        },
+        "cellphone": {
+          "type": "string",
+          "description": "Customer cellphone"
+        },
+        "documnetType": {
+          "type": "string",
+          "description": "Customer documnetType"
+        },
+        "documnetNumber": {
+          "type": "string",
+          "description": "Customer documnetNumber"
+        },
+        "email": {
+          "type": "string",
+          "description": "Customer email"
+        },
+        "channel": {
+          "type": "string",
+          "description": "Channel"
+        }
+      }
+    },
+    "otpInputValidation": {
+      "type": "object",
+      "properties": {
+        "otpNumber": {
+          "type": "integer",
+          "description": "OTP number"
+        },
+        "partnerId": {
+          "type": "string",
+          "description": "Partner Id"
+        },
+        "cellphone": {
+          "type": "string",
+          "description": "Customer cellphone"
+        },
+        "documnetType": {
+          "type": "string",
+          "description": "Customer documnetType"
+        },
+        "documnetNumber": {
+          "type": "string",
+          "description": "Customer documnetNumber"
+        },
+        "email": {
+          "type": "string",
+          "description": "Customer email"
+        },
+        "channel": {
+          "type": "string",
+          "description": "ChanNel"
+        }
+      }
+    },
+    "otpResponse": {
+      "type": "object",
+      "properties": {
+        "returnCode": {
+          "type": "integer",
+          "description": "codigo de retorno"
+        },
+        "mesagge": {
+          "type": "string",
+          "description": "descripcion"
+        },
+        "bodyResponse": {
+          "type": "object",
+          "properties": {
+            "otpNumber": {
+              "type": "integer",
+              "description": "numero otp"
+            }
+          }
+        }
+      }
+    }
+  }
+}
