@@ -6,7 +6,6 @@ host: api-services-uat.cardifnet.com
 schemes:
   - https
 paths:
-  test push
   /co/digital_sales/v1/accounts_cards:
     post:
       description: Invalid input
